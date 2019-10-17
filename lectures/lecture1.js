@@ -35,3 +35,14 @@ for (var props in book) {
    //console.log(props);
    console.log(props + ' = ' + book[props]);
 }
+
+
+var fetch = require('node-fetch');
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(function(req) {
+   return req.json();
+})
+.then(function(body) {
+   console.log(body);
+})
